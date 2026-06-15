@@ -1,6 +1,14 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
+require('dotenv').config();
+
+module.exports = {
+  use: {
+    baseURL: process.env.BASE_URL
+  }
+};
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
